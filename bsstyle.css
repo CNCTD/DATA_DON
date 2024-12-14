@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(5, 5, 15, 0.9), rgba(14, 14, 43, 0.95));
+    background-size: 300% 300%;
+    animation: move 9s infinite ease-in-out;
+    color: white;
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+/* Animated Gradient */
+@keyframes move {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Star and Constellation Styling */
+#constellation-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: transparent;
+    opacity: 0.5;
+}
+
+.star-map {
+    position: relative;
+    z-index: 2;
+}
+
+.star {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Glass Box Styling */
+.glass-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(185, 142, 255, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.2px);
+    max-width: 90%;
+    overflow: hidden;
+    z-index: 1000;
+    transition: width 0.3s ease-in-out;
+}
+
+.glass-box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Close Button */
+.close-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Lexend Zetta", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.43);
+}
+
+/* Phase Info Box */
+#phase-info {
+    position: fixed;
+    top: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    max-width: 90vw;
+    box-sizing: border-box;
+    z-index: 1100;
+}
+
+/* Postcard Styling */
+.postcard {
+    display: flex;
+    width: 37vw;
+    height: 40vh;
+    background-color: #fafafa;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    color: #000;
+    opacity: 0;
+    transform: translate(-180%, -50%) rotateY(-90deg);
+}
+
+.postcard::before {
+    content: '';
+    position: absolute;
+    top: 4vh;
+    bottom: 0;
+    left: 67%;
+    width: 2px;
+    background-color: #ddd;
+    height: 80%;
+}
+
+.left-section, .right-section {
+    padding: 20px;
+}
+
+.left-section {
+    font-family: "Covered By Your Grace", cursive;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.message {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    resize: none;
+}
+
+.signature {
+    font-size: 4em;
+    font-family: "Mrs Saint Delafield", cursive;
+}
+
+.post-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.stamp {
+    transform: scale(0.6);
+}
+
+.address {
+
+    transform: scale(0.4);
+
+}
+
+.ragged {
+    clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%); 
+    box-shadow: 60px 11px 20px 40px rgb(255, 0, 0);
+}
+
+/* Animations */
+@keyframes flipIn {
+    0% {
+        transform: rotateY(-90deg) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateY(0deg) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flipOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--random-x, 5px), var(--random-y, 5px));
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+
+@keyframes flipIn {
+    0% {
+        transform: rotateY(-90deg) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateY(0deg) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flipOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.modal-content.flip-in {
+    animation: flipIn 1.2s ease-out forwards;
+}
+
+.modal-content.fade-out {
+    animation: flipOut 0.6s ease-out forwards;
+}
