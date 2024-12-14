@@ -7,44 +7,43 @@ const ctx = canvas.getContext('2d');
 const starMap = document.querySelector('.star-map');
 const infoBox = document.getElementById('phase-info');
 window.addEventListener('load', () => {
-    // Check the orientation using window.orientation (older approach)
-    const orientation = window.orientation !== undefined ? window.orientation : screen.orientation.angle;
-
-    if (orientation === 0) {
-        console.log('Portrait Mode');
-        starMap.style.visibility = "hidden";
-        scrambleText(infoBox, `Please rotate your screen.`);
-
-        
-    } else if (orientation === 90 || orientation === -90) {
-        console.log('Landscape Mode');
-        starMap.style.visibility = "visible";
-    } else {
-        console.log('Unknown Orientation');
-    }
-});
-
-if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
-    window.screen.orientation.addEventListener("change", function(e) {
-        const orientation = window.screen.orientation.angle; // Get the current orientation angle
+    // Check if the device is a mobile device or tablet
+    if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
+        // Check the orientation using window.orientation (older approach)
+        const orientation = window.orientation !== undefined ? window.orientation : screen.orientation.angle;
 
         if (orientation === 0) {
             console.log('Portrait Mode');
             starMap.style.visibility = "hidden";
             scrambleText(infoBox, `Please rotate your screen.`);
         } else if (orientation === 90 || orientation === -90) {
-            scrambleText(infoBox, `Thank you.`);
-            setTimeout(() => location.reload(), 2000); // Fixed the timeout syntax
+            console.log('Landscape Mode');
+            starMap.style.visibility = "visible";
         } else {
             console.log('Unknown Orientation');
         }
 
-        // This function will be called when the screen orientation changes.
-        console.log("Orientation changed to:", window.screen.orientation.type);
-    });
-} else {
-    console.log('Not a mobile device, ignoring orientation change events.');
-}
+        window.screen.orientation.addEventListener("change", function(e) {
+            const orientation = window.screen.orientation.angle; // Get the current orientation angle
+
+            if (orientation === 0) {
+                console.log('Portrait Mode');
+                starMap.style.visibility = "hidden";
+                scrambleText(infoBox, `Please rotate your screen.`);
+            } else if (orientation === 90 || orientation === -90) {
+                scrambleText(infoBox, `Thank you.`);
+                setTimeout(() => location.reload(), 2000); // Fixed the timeout syntax
+            } else {
+                console.log('Unknown Orientation');
+            }
+
+            // This function will be called when the screen orientation changes.
+            console.log("Orientation changed to:", window.screen.orientation.type);
+        });
+    } else {
+        console.log('Not a mobile device, ignoring orientation change events.');
+    }
+});
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
