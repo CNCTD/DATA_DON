@@ -25,22 +25,22 @@ window.addEventListener('load', () => {
 });
 
 window.screen.orientation.addEventListener("change", function(e) {
+    const orientation = window.screen.orientation.angle; // Get the current orientation angle
+
     if (orientation === 0) {
         console.log('Portrait Mode');
         starMap.style.visibility = "hidden";
         scrambleText(infoBox, `Please rotate your screen.`);
-
-        
     } else if (orientation === 90 || orientation === -90) {
-        scrambleText(infoBox, `Thank you.`)
-        setTimeout(200330);
-        location.reload();
+        scrambleText(infoBox, `Thank you.`);
+        setTimeout(() => location.reload(), 2000); // Fixed the timeout syntax
     } else {
         console.log('Unknown Orientation');
     }
+
     // This function will be called when the screen orientation changes.
     console.log("Orientation changed to:", window.screen.orientation.type);
-  });
+});
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
