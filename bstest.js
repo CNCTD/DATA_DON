@@ -54,7 +54,7 @@ const starsByPhase = {};
 // Fetch data from info.json
 async function fetchPhasesData() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/CNCTD/DATA_DON/refs/heads/main/info.json');
+        const response = await fetch('https://raw.githubusercontent.com/CNCTD/DATA_DON/refs/heads/helpme/info.json');
         const data = await response.json();
 
         // Clear previous phases
