@@ -1,41 +1,34 @@
 {
-  "Phase 1": {
-    "WHINE": {
-      "creator": "Wespdx",
-      "info": "Whine is the very first part in DON and was designed to teach the player the basic gimmicks in a non-intrusive way. <br> The unsettling song choice is from the incredibly talented \"Boards of Canada.\"",
-      "image": "img/Wespdx.jpg"
+    "Phase 1": {
+        "WHINE": {
+            "creator": "Wespdx",
+            "info": "Whine is the very first part in DON and was designed to teach the player the basic gimmicks in a non-intrusive way. <br> The unsettling song choice is from the incredibly talented \"Boards of Canada.\"",
+            "image": "img/Wespdx.jpg"
+        },
+        "SUNNY": {
+            "creator": "Wespdx",
+            "info": "Sunny was my first room, and one of the first decorated rooms in DON. <br>I wanted to make it feel blinding to offset the darker parts in the level.<br> Thank you for playing.",
+            "image": "img/Wespdx.jpg"
+        },
+        "CLOUDS": {
+            "creator": "Blitzer",
+            "info": "Clouds is the first serious thing I made in 2.2, and I'm really happy with how it turned out even all these months later. It unintentionally lined up really well with some pre-existing fangame maps which I think is cool. I really hope you all love it as much as I loved making it :)",
+            "image": "img/Blitzer.jpg"
+        },
+        "BASKETBALL": {
+            "creator": "Wespdx",
+            "info": "Basketball is one of my favorite gimmicks Ive ever made. I sat on the gameplay for this for almost 3 months before figuring out decoration. <br> I wish I couldve done more with the gimmick.",
+            "image": "img/Wespdx.jpg"
+        },
+        "ALLEYWAY": {
+            "creator": "Zipixbox",
+            "info": "It came in a dream.",
+            "image": "img/Zipixbox.jpg"
+        }
     },
-    "SUNNY": {
-      "creator": "Wespdx",
-      "info": "Sunny was my first room, and one of the first decorated rooms in DON. <br>I wanted to make it feel blinding to offset the darker parts in the level.<br> Thank you for playing.",
-      "image": "img/Wespdx.jpg"
-    },
-    "CLOUDS": {
-      "creator": "Blitzer",
-      "info": "Clouds is the first serious thing I made in 2.2, and I'm really happy with how it turned out even all these months later. It unintentionally lined up really well with some pre-existing fangame maps which I think is cool. I really hope you all love it as much as I loved making it :)",
-      "image": "img/Blitzer.jpg"
-    },
-    "BASKETBALL": {
-      "creator": "Wespdx",
-      "info": "Basketball is one of my favorite gimmicks Ive ever made. I sat on the gameplay for this for almost 3 months before figuring out decoration. <br> I wish I couldve done more with the gimmick.",
-      "image": "img/Wespdx.jpg"
-    }
-    
-   
-  },
-  "Phase 2": {
-   
-  },
-  "Phase 3": {
-    
-  },
-  "Phase 4": {
-    
-  },
-  "Phase 5": {
-   
-  },
-  "Phase 6": {
-   
-  }
+    "Phase 2": {},
+    "Phase 3": {},
+    "Phase 4": {},
+    "Phase 5": {},
+    "Phase 6": {}
 }
