@@ -24,6 +24,11 @@
             "creator": "Zipixbox",
             "info": "It came in a dream.",
             "image": "img/Zipixbox.jpg"
+        },
+        "SHOP": {
+            "creator": "DarkCacti",
+            "info": "gotta shop gotta spend, new deals available at a local store near you. beat that tricky platformer level with exclusive level nerf purchases on sale now!!",
+            "image": "img/DarkCacti.jpg"
         }
     },
     "Phase 2": {},
