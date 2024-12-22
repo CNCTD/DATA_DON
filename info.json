@@ -29,6 +29,11 @@
             "creator": "DarkCacti",
             "info": "gotta shop gotta spend, new deals available at a local store near you. beat that tricky platformer level with exclusive level nerf purchases on sale now!!",
             "image": "img/DarkCacti.jpg"
+        },
+        "SPIN": {
+            "creator": "Angelix",
+            "info": "Spin was an extremely fun room to build!! ... until I had to manually create individual gradients for each block and spike on every face... Regardless of that it turn out very nice!! ... until I realized it ate up 1.6k groups... You can tell that zipix had fun with merging",
+            "image": "img/Angelix.jpg"
         }
     },
     "Phase 2": {},
