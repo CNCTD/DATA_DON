@@ -1,0 +1,29 @@
+
+ :root {
+    --bs-body-bg: #e3e1da;
+  }
+  body {
+    font-family: "Fira Code", serif;
+    font-optical-sizing: auto;
+  }
+  mark { 
+    background-color: rgb(154, 184, 190);
+    color: black;
+  }
+  .text-start ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+.custom-width {
+    max-width: 85%; /* Adjust percentage as needed */
+    margin: 0 auto; /* Center the container */
+}
+.moon {
+    color: #cccac3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50em;
+    z-index: -1;
+}
